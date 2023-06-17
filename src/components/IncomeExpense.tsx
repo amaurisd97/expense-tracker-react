@@ -12,7 +12,9 @@ function IncomeExpense() {
       </div>
       <div>
         <h4>Expense</h4>
-        <p className='money minus'>${transactions.filter((trans) => trans.amount < 0).reduce((acc, trans) => trans.amount + acc, 0)}</p>
+        <p className='money minus'>
+          ${transactions.filter((trans) => trans.amount < 0).reduce((acc, trans) => trans.amount + acc, 0) * -1}
+        </p>
       </div>
     </div>
   )
